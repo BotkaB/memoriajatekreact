@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { JatekProvider } from './Context/JatekContext'; 
+import Jatekter from './Components/Jatekter';
 
 function App() {
   return (
+   
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <h1>Memóriajáték</h1>
       </header>
+      <main> 
+      <JatekProvider>
+        <Jatekter /> 
+        </JatekProvider>
+        </main> 
     </div>
+   
   );
 }
 

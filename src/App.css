@@ -2,37 +2,36 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1rem; /* Hozzáadunk paddinget */
 }
 
-.App-link {
-  color: #61dafb;
+/* Média lekérdezések hozzáadása */
+@media (max-width: 1200px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Csökkentjük a betűméretet */
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(6px + 2vmin); /* Még jobban csökkentjük a betűméretet */
+    padding: 0.5rem; /* Csökkentjük a paddinget kisebb képernyőkön */
   }
 }
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(5px + 2vmin); /* További csökkentés a betűméretben */
+    padding: 0.25rem; /* Még kisebb padding a legkisebb képernyőkön */
+  }
+}
+

@@ -1,0 +1,66 @@
+.kep-container {
+  display: flex;
+  justify-content: center; /* Középre igazítja a táblázatot */
+  flex-wrap: wrap;
+}
+
+.kep-container table {
+  width: 80%; /* Maximális szélesség beállítása */
+  border-collapse: collapse;
+  margin: 0 auto; /* Középre igazítja a táblázatot */
+}
+
+.kep-container td {
+  padding: 5px; /* Kisebb padding a cellák körül */
+  text-align: center;
+  vertical-align: middle; /* Függőleges igazítás középre */
+  height: 80px; /* Fix magasság a celláknak */
+  width: 80px; /* Fix szélesség a celláknak */
+}
+
+.kezdo-kep,
+.kep {
+  width: 100%; /* A kép szélessége kitölti a cellát */
+  height: 100%; /* A kép magassága kitölti a cellát */
+  object-fit: contain; /* A kép méretarányos kitöltése a cellában */
+  display: block; /* Kép blokként jelenik meg, kitöltve a cellát */
+}
+
+.kep-elrejtve {
+  visibility: hidden;
+  width: 100%; /* Megtartja a helyet */
+  height: 100%; /* Magasság megőrzése */
+}
+
+@media (max-width: 1200px) {
+  .kep-container {
+    gap: 1%;
+  }
+  .kezdo-kep,
+  .kep-container td {
+    height: 60px; /* Kisebb magasság */
+    width: 60px; /* Kisebb szélesség */
+  }
+}
+
+@media (max-width: 768px) {
+  .kep-container {
+    gap: 1.5%;
+  }
+  .kezdo-kep,
+  .kep-container td {
+    height: 50px; /* Még kisebb magasság */
+    width: 50px; /* Még kisebb szélesség */
+  }
+}
+
+@media (max-width: 480px) {
+  .kep-container {
+    gap: 2%;
+  }
+  .kezdo-kep,
+  .kep-container td {
+    height: 40px; /* Legkisebb magasság */
+    width: 40px; /* Legkisebb szélesség */
+  }
+}
