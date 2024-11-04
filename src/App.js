@@ -15,6 +15,7 @@ function App() {
         <Jatekter /> 
         </JatekProvider>
         </main> 
+      
     </div>
    
   );

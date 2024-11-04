@@ -1,13 +1,16 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useRef } from 'react';
 import kepek from '../Adatok';
-export const JatekContext = createContext("");
+export const JatekContext = createContext();
 
 export const JatekProvider = ({ children }) => {
     const [megforditottKepek, setMegforditottKepek] = useState([]);
     const [parokSzama, setParokSzama] = useState(4);
     const [jatekKepek, setJatekKepek] = useState([]);
     const [lepesekSzama, setLepesekSzama] = useState(0);
-    const [nyert, setNyert] = useState("")
+    const [nyert, setNyert] = useState("");
+    const [elteltIdo, setElteltIdo]=useState("");
+    const idozitoRef=useRef(null);
+  
 
     function KepMegforditas(id) {
         if (megforditottKepek.length === 2) {
@@ -47,6 +50,7 @@ export const JatekProvider = ({ children }) => {
 
             const mindenKepElrejtve = modositottJatekKepek.every(kep => kep.elrejtve);
             if (mindenKepElrejtve) {
+                clearInterval(idozitoRef.current);
                 setNyert("Gratulálok, nyertél!");
 
             }
@@ -63,6 +67,26 @@ export const JatekProvider = ({ children }) => {
             setJatekKepek([]);
             setLepesekSzama(0);
             setNyert("");
+            if (idozitoRef.current) {
+                clearInterval(idozitoRef.current);
+            }
+          
+          
+           setElteltIdo("");
+            
+           
+            let elteltMP=0;
+            idozitoRef.current=setInterval(() => {
+        
+               
+                let perc = parseInt(elteltMP / 60);
+                let mp = elteltMP % 60;
+                setElteltIdo(`${perc < 10 ? "0" + perc : perc}:${mp < 10 ? "0" + mp : mp}`);
+                elteltMP++;
+               
+                
+            }, 1000);
+           
             const kepekValasztottak = kepek.slice(1, parokSzama + 1);
             let egyediId = 1; // Egyedi azonosítók létrehozása
             const duplikaltKepek = [...kepekValasztottak, ...kepekValasztottak].map(kep => ({
@@ -73,10 +97,11 @@ export const JatekProvider = ({ children }) => {
             const kevertKepek = duplikaltKepek.sort(() => Math.random() - 0.5);
 
             setJatekKepek(kevertKepek);
-        }
+
+        }            
 
         return (
-            <JatekContext.Provider value={{ kepek, megforditottKepek, parokSzama, jatekKepek, KepMegforditas, ParokSzamaBeallitas, jatekKezdese, lepesekSzama, nyert }}>
+            <JatekContext.Provider value={{ kepek, megforditottKepek, parokSzama, jatekKepek, KepMegforditas, ParokSzamaBeallitas, jatekKezdese, lepesekSzama, nyert, elteltIdo }}>
                 {children}
             </JatekContext.Provider>
         )

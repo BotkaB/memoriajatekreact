@@ -3,20 +3,23 @@
   display: flex;
   justify-content: center; 
   flex-wrap: wrap;
+
 }
 
 .kep-container table {
-  width: 80%;
-  height:80%; 
+  width: 30%;
+  height:30%; 
   border-collapse: collapse;
   margin: 0 auto; 
+  
 }
+
 
 .kep-container td {
   padding: 5px; 
   text-align: center;
   vertical-align: middle; 
-  max-height: 70px;
+ 
  
 }
 
@@ -35,5 +38,37 @@
   visibility: hidden;
   width: 100%; 
   height: 100%; 
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+  .kep-container table {
+    width: 60%;
+    height:60%; 
+    border-collapse: collapse;
+    margin: 0 auto; 
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .kep-container table {
+    width: 90%;
+    height:90%; 
+    border-collapse: collapse;
+    margin: 0 auto; 
+  }
+}
+
+@media (max-width: 480px) {
+  .kep-container table {
+    width: 100%;
+    height:100%; 
+    border-collapse: collapse;
+    margin: 0 auto; 
+  }
 }
 

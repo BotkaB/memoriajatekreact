@@ -4,7 +4,7 @@ import Kep from './Kep';
 import Kezdokep from './Kezdokep';
 
 export default function Jatekter() {
-  const { jatekKepek, parokSzama, ParokSzamaBeallitas, jatekKezdese, lepesekSzama, nyert } = useContext(JatekContext);
+  const { jatekKepek, parokSzama, ParokSzamaBeallitas, jatekKezdese, lepesekSzama, nyert, elteltIdo } = useContext(JatekContext);
   const [kezdodott, setKezdodott] = useState(false);
 
   function jatekInditas() {
@@ -23,7 +23,7 @@ export default function Jatekter() {
         </div>
       ) : (
         <div>
-          <div className="parvalaszto">
+          <div >
             <label htmlFor="parokSzama">Párok száma:</label>
             <input
               type="number"
@@ -35,7 +35,8 @@ export default function Jatekter() {
             />
             <button onClick={jatekKezdese}>Új játék</button>
           </div>
-          <h3>Lépések száma: {lepesekSzama}</h3>
+          <p>Lépések száma: {lepesekSzama}</p>
+          <p>Eltelt idő: {elteltIdo}</p>
           {nyert && <h2>{nyert}</h2>}
           <div className="kep-container">
             <table>

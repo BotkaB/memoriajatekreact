@@ -4,34 +4,35 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 15vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
- margin-bottom: 2%;
+ margin-bottom: 1%;
 }
 
-/* Média lekérdezések hozzáadása */
+
+
 @media (max-width: 1200px) {
   .App-header {
-    font-size: calc(8px + 2vmin); /* Csökkentjük a betűméretet */
+    font-size: calc(8px + 2vmin); 
   }
 }
 
 @media (max-width: 768px) {
   .App-header {
-    font-size: calc(6px + 2vmin); /* Még jobban csökkentjük a betűméretet */
-    padding: 0.5rem; /* Csökkentjük a paddinget kisebb képernyőkön */
+    font-size: calc(6px + 2vmin); 
+    padding: 0.5rem; 
   }
 }
 
 @media (max-width: 480px) {
   .App-header {
-    font-size: calc(5px + 2vmin); /* További csökkentés a betűméretben */
-    padding: 0.25rem; /* Még kisebb padding a legkisebb képernyőkön */
+    font-size: calc(5px + 2vmin); 
+    padding: 0.25rem; 
   }
 }
 
