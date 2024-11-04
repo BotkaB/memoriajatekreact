@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/memoriajatekreact/static/css/main.0f818945.css",
-    "main.js": "/memoriajatekreact/static/js/main.a869dd6b.js",
+    "main.js": "/memoriajatekreact/static/js/main.eb3e5829.js",
     "static/js/453.acc67eac.chunk.js": "/memoriajatekreact/static/js/453.acc67eac.chunk.js",
     "index.html": "/memoriajatekreact/index.html",
     "main.0f818945.css.map": "/memoriajatekreact/static/css/main.0f818945.css.map",
-    "main.a869dd6b.js.map": "/memoriajatekreact/static/js/main.a869dd6b.js.map",
+    "main.eb3e5829.js.map": "/memoriajatekreact/static/js/main.eb3e5829.js.map",
     "453.acc67eac.chunk.js.map": "/memoriajatekreact/static/js/453.acc67eac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f818945.css",
-    "static/js/main.a869dd6b.js"
+    "static/js/main.eb3e5829.js"
   ]
 }
