@@ -15,6 +15,7 @@ function App() {
         <Jatekter /> 
         </JatekProvider>
         </main> 
+        <footer>Botka Bianka</footer>
       
     </div>
    
