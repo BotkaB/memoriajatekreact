@@ -10,7 +10,7 @@ export default function Kep({ id, url, hatterkep, elrejtve }) {
 
         KepMegforditas(id);
     }
-
+console.log("hello")
     return (
         <>
             {elrejtve ? (
